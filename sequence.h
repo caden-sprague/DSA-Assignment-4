@@ -82,43 +82,74 @@
 
 #include <cstdlib>  // provides size_t
 
-namespace CS3358_FA2024_A04xco_sequenceOfNum
-{
-   class sequence
-   {
-   public:
-      // TYPEDEFS and CONSTANT
-      typedef double value_type;
-      typedef size_t size_type;
-      static const size_type CAPACITY = 10;
-      // CONSTRUCTOR
-      sequence();
-      // MODIFICATION MEMBER FUNCTIONS
-      void start();
-      void end();
-      void advance();
-      void move_back();
-      void add(const value_type& entry);
-      void remove_current();
-      // CONSTANT MEMBER FUNCTIONS
-      size_type size() const;
-      bool is_item() const;
-      value_type current() const;
+// namespace CS3358_FA2024_A04xco_sequenceOfNum
+// {
+//    class sequence
+//    {
+//    public:
+//       // TYPEDEFS and CONSTANT
+//       typedef double value_type;
+//       typedef size_t size_type;
+//       static const size_type CAPACITY = 10;
+//       // CONSTRUCTOR
+//       sequence();
+//       // MODIFICATION MEMBER FUNCTIONS
+//       void start();
+//       void end();
+//       void advance();
+//       void move_back();
+//       void add(const value_type& entry);
+//       void remove_current();
+//       // CONSTANT MEMBER FUNCTIONS
+//       size_type size() const;
+//       bool is_item() const;
+//       value_type current() const;
 
-   private:
-      value_type data[CAPACITY];
-      size_type used;
-      size_type current_index;
-   };
-}
+//    private:
+//       value_type data[CAPACITY];
+//       size_type used;
+//       size_type current_index;
+//    };
+// }
 
-namespace CS3358_FA2024_A04xco_sequenceOfChar
+// namespace CS3358_FA2024_A04xco_sequenceOfChar
+// {
+//    class sequence
+//    {
+//    public:
+//       // TYPEDEFS and MEMBER SP2020
+//       typedef char value_type;
+//       typedef size_t size_type;
+//       static const size_type CAPACITY = 10;
+//       // CONSTRUCTOR
+//       sequence();
+//       // MODIFICATION MEMBER FUNCTIONS
+//       void start();
+//       void end();
+//       void advance();
+//       void move_back();
+//       void add(const value_type& entry);
+//       void remove_current();
+//       // CONSTANT MEMBER FUNCTIONS
+//       size_type size() const;
+//       bool is_item() const;
+//       value_type current() const;
+
+//    private:
+//       value_type data[CAPACITY];
+//       size_type used;
+//       size_type current_index;
+//    };
+// }
+
+namespace CS3358_FA2024_A04xco_sequenceTemplate
 {
+   template <class T>
    class sequence
    {
    public:
       // TYPEDEFS and MEMBER SP2020
-      typedef char value_type;
+      typedef T value_type;
       typedef size_t size_type;
       static const size_type CAPACITY = 10;
       // CONSTRUCTOR
@@ -141,5 +172,7 @@ namespace CS3358_FA2024_A04xco_sequenceOfChar
       size_type current_index;
    };
 }
+#include "sequence.cpp"
+
 
 #endif
